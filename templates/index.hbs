@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GeeksForGeeks Profile Analyzer</title>
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body style="background-color: #5CDB95">
+    {{>header}}
+    {{!-- Search Bar --}}
+    <div class="row container-fluid" style="margin-top: 2%;">
+        <div class="col-7">
+            <p style="color: #EDF5E1; margin-left: 16%; font-size: 20px;">Find out the number of questions you have done
+                in different topics just by
+                entering your geeksforgeeks profile.<br>
+                All you have to do is enter your <strong>username</strong> and click <strong>search</strong>.</p>
+        </div>
+        <div class="col-5">
+            <form style="margin-left: 10%; margin-top:1%;">
+                <input class="form-control col-md-8" style="padding: 2%; margin-left:2%;" placeholder="Username">
+                <div class="row" style="padding: 2%; margin-left: 0.5%;">
+                    <button id="search123" class="btn btn-dark p-2 px-3">Search</button>
+                    <p id="loading" class="ml-2" style="color: #EDF5E1;  font-size: 18px; position:relative; top:5px;">
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{!-- /Search Bar --}}
+
+    {{!-- Profile and Questions --}}
+    <div class="row" style="background-color: ; padding:2% ; display : none;" id="profileblock">
+        {{!-- User Details --}}
+        <div class="col-sm-4" style=" margin-left: 8%; font-size: 20px; position:sticky; ">
+            <div class="sticky-top" style="top:20%">
+                <div class="card-body text-center rounded-top" style="background-color: #05386B; color:white;">
+                    User Details
+                </div>
+                <div class="card-body rounded-bottom" style="background-color: #8EE4AF;color: #05386B;" id="profile">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        {{!-- /UserDetails --}}
+        {{!-- Questions --}}
+        <div id="Content123" class="col-sm-5" style=" margin-left: 5%; font-size: 20px;">
+        </div>
+        {{!-- /Questions --}}
+    </div>
+    {{!-- /Profile and Questions --}}
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
